@@ -4,3 +4,21 @@
   url: "www.baidu.com"
   excerpt:
   image: "https://mmistakes.github.io/skinny-bones-jekyll/images/wood-texture-1600x800.jpg"
+
+
+- title: "测试1"
+  url: "www.baidu.com"
+  excerpt:
+  image: "https://mmistakes.github.io/skinny-bones-jekyll/images/wood-texture-1600x800.jpg"
+
+
+- title: "测试2"
+  url: "www.baidu.com"
+  excerpt:
+  image: "https://mmistakes.github.io/skinny-bones-jekyll/images/wood-texture-1600x800.jpg"
+
+
+- title: "测试3"
+  url: "www.baidu.com"
+  excerpt:
+  image: "https://mmistakes.github.io/skinny-bones-jekyll/images/wood-texture-1600x800.jpg"
