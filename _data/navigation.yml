@@ -1,24 +1,24 @@
 # Site navigation links
 
-- title: "测试"
+- title: "Getting Started"
   url: "www.baidu.com"
-  excerpt:
-  image: "https://mmistakes.github.io/skinny-bones-jekyll/images/wood-texture-1600x800.jpg"
+  excerpt: "Everything you need to know to get started with Skinny Bones and Jekyll."
+  image: "/menu-image.png"
 
 
-- title: "测试1"
+- title: "Sample Articles"
   url: "www.baidu.com"
-  excerpt:
-  image: "https://mmistakes.github.io/skinny-bones-jekyll/images/wood-texture-1600x800.jpg"
+  excerpt: "Examples of long form posts."
+  image: "/menu-image.png"
 
 
-- title: "测试2"
+- title: "Media"
   url: "www.baidu.com"
-  excerpt:
-  image: "https://mmistakes.github.io/skinny-bones-jekyll/images/wood-texture-1600x800.jpg"
+  excerpt: "Examples of media posts perfect for showcasing work, photographs, etc."
+  image: "/menu-image.png"
 
 
-- title: "测试3"
+- title: "About"
   url: "www.baidu.com"
-  excerpt:
-  image: "https://mmistakes.github.io/skinny-bones-jekyll/images/wood-texture-1600x800.jpg"
+  excerpt: "All about Skinny Bones for Jekyll."
+  image: "/menu-image.png"
