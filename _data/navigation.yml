@@ -1,6 +1,6 @@
 # Site navigation links
 
-- title:
-  url:
+- title: "测试"
+  url: "www.baidu.com"
   excerpt:
-  image:
+  image: "https://mmistakes.github.io/skinny-bones-jekyll/images/wood-texture-1600x800.jpg"
