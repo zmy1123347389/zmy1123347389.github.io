@@ -1,44 +1,23 @@
-This repository is no longer maintained. 
-============
+# Skinny Bones Jekyll Starter
 
-Herring Cove
-============
+Just a little something I'm using to jump start a site refresh. I like to think of it as a starter for building your own Jekyll site. I purposely keep the styling minimal and bare to make it easier to add your own flare and markup.
 
-Herring Cove is a clean and responsive theme for Jekyll. 
+![screenshot of Skinny Bones](http://mmistakes.github.io/skinny-bones-jekyll/images/skinny-bones-theme-feature.jpg)
 
+---
 
-### Overview 
+## Notable Features
 
-* Fixed Sidebar with social links
-* Minimal design 
-* Comments by Disqus
-* Social Sharing abilities 
-* Easy to configure
-* Based on Bootstrap
+* Jekyll 3.x and GitHub Pages compatible.
+* Stylesheet built using Sass.
+* Data files for easier customization of the site navigation/footer and for supporting multiple authors.
+* Optional Disqus comments, table of contents, social sharing links, and Google AdSense ads.
+* And more.
 
-### Screenshots
+## More Jekyll Themes
 
-![screenshot](/images/screenshot1.png)
-![screenshot](/images/screenshot2.png)
+Check out my more popular Jekyll themes, available as Ruby gems and 100% GitHub Pages compatible.
 
-### Setup
-
-1. Install Jekyll
-2. Fork or [download](https://github.com/arnp/herring-cove/archive/master.zip) this theme repo
-3. Edit the `_config.yml` file
-
-You can change the showcase image by replacing `showcase.jpg` file in the `images` folder. I'll try to find a better way to do this soon. 
-
-### Download
-
-[download](https://github.com/arnp/herring-cove/archive/master.zip)
-
-### License
-* [MIT](http://opensource.org/licenses/MIT)
-
--------------
-Herring Cove is always a work in progress and as such, I hope to clean up the code and add features as time permits. Feel free to add your own additions. 
-
-*What's with the name?*
-
-[Herring Cove](http://www.capecodbeachchair.com/beachguide/index.cfm?page=3&BeachID=5) is a beach on Cape Cod in Provincetown, Massachusetts. If you're in the area, be sure to check it out!
+* [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes)
+* [So Simple](https://github.com/mmistakes/so-simple-theme)
+* [Basically Basic](https://github.com/mmistakes/jekyll-theme-basically-basic)
