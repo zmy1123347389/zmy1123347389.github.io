@@ -1,27 +1,31 @@
-# Site settings
-title: 张明远
-email: zmy112334@163.com
-description: > # this means to ignore newlines until "baseurl:"
-  西安西电机电学院(2011-2014)
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://zmy1123347389.github.io/" # the base hostname & protocol for your site
+name: Herring Cove
+author: Herring Cove
+baseurl: /herring-cove
+description: theme for jekyll
+github: http://www.github.com/arnp
+twitter: http://www.twitter.com/
+facebook: http://www.facebook.com
+linkedin: http://www.linkedin.com
+email: rnpatel[at]me.com
+location: 42°2'16"N   70°12'47"W
+disqus: diqus-username
 
-oschina_username: zmy112334
-csdn_username: zmy112334
-github_username:  zmy1123347389
-moble: 13521306775
+##Make sure to edit the above fields, especially for disqus.
 
-# Build settings
-markdown: kramdown
 
-# Other options
-permalink: blog/:year/:month/:title
-job.title: "Assistant Professor"
-excerpt_separator: "<!--more-->"
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions: ["tables"]
 
-# SEO stuff
-# google_author: ""
-# google_site_verification: ""
-# bing_webmastertools_id: ""
-
-#codehighlighter
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
