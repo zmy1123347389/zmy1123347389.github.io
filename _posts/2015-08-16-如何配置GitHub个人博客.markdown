@@ -1,0 +1,44 @@
+---
+layout: post
+title:  "如何配置GitHub个人博客"
+date:   2018-11-14 19:36:27
+categories: 张明远
+---
+GitHub也包含个人免费博客主页功能
+
+
+1.注册GitHub账号
+
+
+2.选择New repository
+
+
+3.如图
+
+
+  <img class="" src="/images/blog/2018-11-14-如何配置GitHub个人博客/步骤1.png" />
+
+4.http://jekyllthemes.org/ 进入该网站查找自己喜欢的博客风格
+
+
+  <img class="" src="/images/blog/2018-11-14-如何配置GitHub个人博客/步骤2.png" />
+
+5.我们选择HomePage，继续选择Fork
+
+
+  <img class="" src="/images/blog/2018-11-14-如何配置GitHub个人博客/步骤3.png" />
+
+  <img class="" src="/images/blog/2018-11-14-如何配置GitHub个人博客/步骤4.png" />
+
+6.更改个人博客内容需要
+
+
+  git clone https://github.com/yourName/yourName.github.io.git
+
+
+  然后对照信息进行修改
+
+
+  附:官网创建GitHub个人博客文档 https://pages.github.com/
+
+[张明远]:      https://zmy1123347389.github.io/
