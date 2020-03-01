@@ -1,216 +1,150 @@
-/**
- * Site header
- */
-.site-header {
-    border-top: 0px solid $grey-color-dark;
-	border-bottom: 4px solid $clemson-purple;
-    min-height: 56px;
-    background: $clemson-orange;
-    // Positioning context for the mobile navigation icon
-    position: relative;
-
+html,
+body {
+  height: 100%;
 }
 
-.site-title {
-    font-size: 26px;
-/* 		margin-top: 15px;
-    line-height: 40px; */
-    letter-spacing: -1px;
-    margin-bottom: 0;
+.bar-header {
+  background-color: $primaryDark;
+  padding: rem(10px) rem(15px);
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  transition: top 0.5s, left 0.3s ease, background-color 0.5s, box-shadow 0.5s;
+  
+  @include media(">=sm") {
+    padding: rem(15px) rem(0px);
+  }
+
+  .logo {
+    display: inline-block;
+    margin: 0;
+    height: rem(32px);
+    line-height: rem(32px);
+
+    a {
+      display: block;
+      color: $accentDark;
+      text-decoration: none;
+      font-size: rem(32px);
+      position: relative;
+      outline: 0;
+    }
+
+    svg {
+      width: rem(120px);
+      height: rem(30px);
+      transition: all .4s;
+  
+      @include media(">=sm") {
+        width: rem(205px);
+      }
+    }
+  }
+
+  .version {
+    color: $accentDark;
+    font-size: rem(10px);
+    font-weight: normal;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    transform: translateX(110%);
+    opacity: 0.3;
+  }
+
+  .icon-menu {
     float: left;
-    font-weight: 500;
-		font-family: 'Titillium Web', sans-serif;
-    color: #ffffff;
-    &,
-    &:visited {
-        color: #ffffff;
+    cursor: pointer;
+    margin: rem(5px) rem(20px) rem(5px) 0;
+    width: rem(20px);
+    height: rem(20px);
+    fill: $accentDark;
+
+    @include media(">=sm") {
+      margin: rem(5px) rem(20px) rem(5px) rem(25px);
     }
-    &,
-    &:hover {
-	text-decoration: none;
-}
-}
+  }
 
-.site-header .wrapper {
-	padding-top: 20px;
-	position: relative;
-}
-
-.site-nav ul li a {
-	color: #fff;
-}
-
-.site-nav ul {
-
-	text-align: right;
-	float: right;
-	padding-top: 9px;
-	font-size: 85%;
-	letter-spacing: 1px;
-	line-height: 1em;
-	font-weight: 600;
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	text-transform: uppercase;
-		font-family: 'Titillium Web', sans-serif;
-
-}
-
-.site-nav .menu > li {
-	border-bottom: 3px solid transparent;
-	display: inline-block;
-	height: 23px;
-	line-height: normal;
-	margin: 12px 0 0 20px;
-	padding: 0 0 2px 0;
-	position: relative;
-	vertical-align: top;
-}
-
-.site-nav a {
-	display: block;
-        color: #ffffff;
-}
-
-/* Sub Menu */
-
-.site-nav .sub-menu a {
-	display: block;
-	font-weight: normal;
-	height: auto;
-	letter-spacing: 0;
-	line-height: 1.2em;
-	padding: 4px 10px;
-color: #522d80;
-
-}
-
-.site-nav .sub-menu a:hover {
-	color: $clemson-orange;
-}
-.site-nav  .sub-menu {
-	background: #ffffff;
-	border-color: $clemson-purple;
-	min-width: 265px;
-
-	z-index:2147483647;
-}
-.site-nav .sub-menu li.current-menu-item > a {
-	border-left-color: $clemson-orange;
-	border-right-color: $clemson-orange;
-	border-right: 0px;
-
-}
-
-
-.sub-menu {
-	border: 3px solid transparent;
-	border-top: 0;
-	/* bg and border colors set in header */
-	box-shadow: 0 2px 2px rgba(0,0,0,0.4);
-	-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.4);
-	-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.4);
-	display: none;
-	right: -10px;
-	padding: 4px 0 3px 0;
-	position: absolute;
-	text-align: left;
-	text-transform: none;
-	top: 28px;
-	min-width: 265px;
-
-z-index:999;
-	font-family: Helvetica, Arial, Verdana, sans-serif;
-
-}
-
-.sub-menu li {
-	border-bottom: 0;
-	display: block;
-	height: auto;
-	margin: 3px 0;
-	padding: 0;
-	text-align: left;
-}
-
-.site-nav li:hover > .sub-menu {
-	display: block;
-}
-
-
-
-.site-nav h1 {
-	position: absolute;
-	left: -999em;
-}
-
-
-.site-nav {
+  .dosearch {
     float: right;
-    line-height: 40px;
-
-
-    .menu-icon {
-        display: none;
+    width: rem(30px);
+    height: rem(30px);
+    cursor: pointer;
+    margin: 0;
+    @include media(">=sm") {
+      margin: 0 rem(20px) 0 0;
     }
+  }
 
-    .page-link {
-        color: #ffffff;
-    background: $clemson-orange;
-        line-height: $base-line-height;
+  .icon-search {
+    width: rem(20px);
+    height: rem(20px);
+    fill: $accentDark;
+    margin: rem(5px);
+  }
 
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
+  .get-theme {
+    display: none;
+    font-size: rem(13px);
+    font-weight: bold;
+    text-decoration: none;
+    background-color: $themeColor;
+    color: $accentDark;
+    padding: rem(5px) rem(10px);
+    border-radius: rem(5px);
+    float: right;
+    margin: rem(5px) rem(15px) rem(5px) rem(5px);
+
+    @include media(">=sm") {
+      display: inline-block;
     }
-
-
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-        }
-    }
+  }
 }
 
+body.main-page {
+  background-color: #141414;
 
+  .bar-header {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+}
+
+body.light:not(.main-page) {
+  .bar-header {
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.95);
+
+    .icon-search,
+    .icon-menu {
+      fill: $primaryDark;
+    }
+
+    .logo a,
+    .version {
+      color: $primaryDark;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 17;
+  opacity: 0;
+  transition: all 0.3s;
+
+  &.show {
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
