@@ -1,13 +1,13 @@
-- title: "About"
+- title: "关于"
   href: "/about/"
 
-- title: "Blog"
+- title: "博客"
   href: "/blog/"
 
-- title: "CV"
+- title: "简历"
   href: "/cv/"
 
-- title: "Miscellany"
+- title: "个人作品"
   href: "/miscellany/"
   subcategories:
     - subtitle: "Item 1"
