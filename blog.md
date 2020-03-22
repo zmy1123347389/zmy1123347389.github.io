@@ -1,10 +1,10 @@
 ---
 layout: page
-title: 博客
+title: Blog
 permalink: /blog/
 ---
 
-千磨万击还坚劲，任尔东西南北风
+Tell us about your blog. Hopefully it's cool.
 
 <ul class="listing">
 {% for post in site.posts %}
