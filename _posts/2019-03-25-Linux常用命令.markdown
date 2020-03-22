@@ -1,0 +1,404 @@
+---
+layout: post
+title:  "Linux常用命令"
+date:   2019-03-25 21:01:27
+categories: 张明远
+---
+
+一、解/压缩
+
+解压
+
+1、*.tar 用 tar -xvf 解压
+
+2、*.gz 用 gzip -d或者gunzip 解压
+
+3、*.tar.gz和*.tgz 用 tar -xzf 解压
+
+4、*.bz2 用 bzip2 -d或者用bunzip2 解压
+
+5、*.tar.bz2用tar -xjf 解压
+
+6、*.Z 用 uncompress 解压
+
+7、*.tar.Z 用tar -xZf 解压
+
+8、*.rar 用 unrar e解压
+
+9、*.zip 用 unzip 解压
+
+压缩
+
+1、*.tar 用 tar czvf file.tar dirname 压缩
+
+2、*.gz 用 gzip file 压缩
+
+3、*.tar.gz和*.tgz 用 tar zcvf file.tar.gz dirname 压缩
+
+4、*.bz2 用 bzip2 -z file2 压缩
+
+5、*.tar.bz2用tar jcvf file.tar.bz2 dirname 压缩
+
+6、*.Z 用 compress file 压缩
+
+7、*.tar.Z 用 tar zcvf file.tar.z dirname 压缩
+
+8、*.rar 用 rar a all file.*   all.rar 压缩
+
+9、*.zip 用 zip file.zip dirname压缩
+
+二、删除
+
+（1）删除当前目录下的文件
+
+	1.rm -f *
+
+	#最经典的方法，删除当前目录下的所有类型的文件
+
+	2.find . -type f -delete或find . -type f -exec rm -f {} \;
+
+	#用find命令查找普通文件并删除or用find命令的处理动作将其删除
+
+	3.find . -type f | xargs rm -f
+
+	#用于参数列表过长;要删除的文件太多
+
+	4.rm-f `find . -type f`
+
+	#删除全部普通文件
+
+	5.for delete in `ls -l`;do rm -f * ;done
+
+	#用for循环语句删除当前目录下的所有类型的文件
+
+（2）删除指定目录下的文件
+
+	1.rm -f 指定目录*
+
+	#最经典的方法，删除指定目录下的所有类型的文件
+
+	2.find 指定目录 -type f -delete或find 指定目录 -type f -exec rm -f {} \;
+
+	#用find命令查找指定目录下的所有普通文件并删除or用find命令的处理动作将其删除
+
+	3.find 指定目录 -type f | xargs rm -f
+
+	#用于参数列表过长;要删除的文件太多
+
+	4.rm-f `find 指定目录 -type f`
+
+	#删除指定目录下的全部普通文件
+
+	5.for delete in `ls –l 指定目录路径`;do rm -f * ;done
+
+	#用for循环语句删除指定目录下的所有类型的文件
+
+三、查看内存
+
+<img class="" src="/images/blog/2019-03-25-Linux常用命令/top.png" />
+
+1.top ：查看内存占用情况
+	
+	PID：进程的ID
+
+	USER：进程所有者
+
+	PR：进程的优先级别，越小越优先被执行
+
+	NInice：值
+
+	VIRT：进程占用的虚拟内存
+
+	RES：进程占用的物理内存
+
+	SHR：进程使用的共享内存
+
+	S：进程的状态。S表示休眠，R表示正在运行，Z表示僵死状态，N表示该进程优先值为负数
+
+	%CPU：进程占用CPU的使用率
+
+	%MEM：进程使用的物理内存和总内存的百分比
+
+	TIME+：该进程启动后占用的总的CPU时间，即占用CPU使用时间的累加值。
+
+	COMMAND：进程启动命令名称
+
+<img class="" src="/images/blog/2019-03-25-Linux常用命令/free.png" />
+
+2.free：查看内存大小
+	
+
+	total:总计物理内存的大小。
+
+	used:已使用多大。
+
+	free:可用有多少。
+
+	Shared:多个进程共享的内存总额。
+
+	Buffers/cached:磁盘缓存的大小。
+
+	第三行(-/+ buffers/cached):
+
+	used:已使用多大。
+
+	free:可用有多少。
+
+	第四行就不多解释了。
+
+	区别：第二行(mem)的used/free与第三行(-/+ buffers/cache) used/free的区别。 
+
+	这两个的区别在于使用的角度来看
+
+	第一行是从OS的角度来看，因为对于OS，buffers/cached 
+	都是属于被使用，所以他的可用内存是434884KB,已用内存是3489800KB,
+
+	第三行所指的是从应用程序角度来看，对于应用程序来说，buffers/cached 是等于可用的，因为buffer/
+	cached是为了提高文件读取的性能，当应用程序需在用到内存的时候，buffer/cached会很快地被回收。
+	所以从应用程序的角度来说，可用内存=系统free memory+buffers+cached。
+
+四、服务配置
+
+1.关闭防火墙
+
+	sudo service iptables stop
+
+	chkconfig iptables off  centos7
+2.重启网管
+	service network restart centos6重启网管
+	
+	systemctl restart network  centos7重启网管
+
+3.重启/关机
+
+	shutdown -r now    现在重启  
+
+	shutdown -r 10	10min后重启 
+
+	reboot	现在重启
+
+	halt	立刻关机
+
+	poweroff	立刻关机
+
+4.ssp IP  远程登录主机 exit退出登录
+
+5.强制退出   Esc键    :q! 
+
+6.远程复制
+
+	（1）从本地复制到远程（将music文件夹复制到others）
+
+	scp -r /home/space/music/ root@www.runoob.com:/home/root/others/ 
+
+	scp -r /home/space/music/ www.runoob.com:/home/root/others/ 
+
+	（2）从远程复制到本地（将others文件夹复制到music）
+
+	scp root@www.runoob.com:/home/root/others/ /home/space/music/ 
+
+	scp -r www.runoob.com:/home/root/others/ /home/space/music/
+
+
+五、常用命令
+
+1.ls
+
+	-l     use a long listing format  以长列表方式显示（详细信息方式）
+
+	-t     sort by modification time 按修改时间排序（最新的在最前面）
+
+	-r     reverse order while sorting （反序）
+
+	ls按时间排序
+
+	ls -lt 从新到旧
+
+	ls -lrt 从旧到新
+
+	ls按文件大小排序
+
+	ls -sl 由大到小排序
+
+	ls -slr 从小到大排序
+
+2.cat 全文查看（文件过大不建议使用此命令）
+
+3.tail/head
+
+	-f 循环读取
+
+	-q 不显示处理信息
+
+	-v 显示详细的处理信息
+
+	-c<数目> 显示的字节数
+
+	-n<行数> 显示行数
+
+	--pid=PID 与-f合用,表示在进程ID,PID死掉之后结束. 
+
+	-q, --quiet, --silent 从不输出给出文件名的首部 
+
+	-s, --sleep-interval=S 与-f合用,表示在每次反复的间隔休眠S秒	
+
+	tail -f catalina.out 	实时监控启动日志
+
+	tail -100f catalina.out 	实时查看日志文件 后一百行
+
+4.编辑器vi/nano
+
+	vi  启动vi编辑器
+
+	按下 i 进入输入模式(也称为编辑模式)，开始编辑文字
+
+	按下 ESC ，输入:wq! 保存并退出  :q! 直接退出
+
+	光标的移动除了键盘上的上下左右键.也可以是小写模式下,按键盘上的"h,j,k,l",
+
+	"ctrl+b":屏幕往后移动一页
+
+	"ctrl+f":屏幕往前移动一页
+
+	"ctrl+u":屏幕往后移动半页
+
+	"ctrl+d":屏幕往前移动半页
+
+	输入任何一个整数,然后输入"shift+G" 就可以到这一页的开头了.
+
+	按键盘上的大写"G"移动到文章的最后.
+
+	按"$"符号将光标移动到行尾
+
+	"^"将光标移到行头
+
+	"w":将光标移到下一行头
+
+	"b":跟"w"相反.移到上一行行头
+
+	"e":将光标移到下一行尾.
+
+	如果想让文本显示行号.就在命令行 模式下,在文本最后输入":set nu"命令.就可以了
+
+	用"/"加上要查找的内容.例如"/hello"或者是"?hello"也是可以的.
+
+	nano 编辑器（自带提示）
+
+5.touch/mkdir
+	
+	touch filename.* 创建文件
+
+	mkdir filename 创建文件夹
+
+6.	进程/端口号
+
+	ps -ef|grep tomcat
+
+	ps aux | grep tomcat 	同上
+
+	kill -9 端口号		停止进程
+
+	sudo ./catalina.sh start		启动Tomcat
+
+	sudo ./shutdown.sh start		停止Tomcat
+
+	lsof -i:端口号		查看端口号占用
+
+	netstat -tunlp |grep 端口号	查看指定的端口号的进程情况
+
+	netstat -nap | grep 端口号 | wc -l  查看端口连接数
+
+	netstat -antp | grep 端口号
+
+	※netstat※
+
+	（1）列出所有端口 (包括监听和未监听的)
+
+	netstat -a 	列出所有端口
+
+    netstat -at 	列出所有 tcp 端口
+
+	netstat -au 	列出所有 udp 端口
+
+	（2）列出所有处于监听状态的 Sockets
+
+	netstat -l 		只显示监听端口
+
+	netstat -lt 	只列出所有监听 tcp 端口
+
+	netstat -lu 	只列出所有监听 udp 端口
+
+	netstat -lx 	只列出所有监听 UNIX 端口
+
+	（3）显示每个协议的统计信息
+
+	netstat -s 		显示所有端口的统计信息
+
+	netstat -st 或 -su 		显示 TCP 或 UDP 端口的统计信息
+
+	（4）显示 PID 和进程名称
+
+	netstat -pt 	可以与其它开关一起使用，就可以添加 “PID/进程名称” 到 netstat 输出中，这样 debugging 的时候可以很方便的发现特定端口运行的程序
+
+	（5）在 netstat 输出中不显示主机，端口和用户名 (host, port or user)
+
+	netstat -an
+
+	（6）持续输出 netstat 信息
+
+	netstat -t -c 2		netstat 将每隔一秒输出网络信息
+
+	（7）显示系统不支持的地址族 (Address Families)
+
+	netstat --verbose
+
+	（8）显示核心路由信息
+
+	netstat -rn
+
+	（9）找出程序运行的端口
+
+	netstat -apn | grep 进程名 		找出运行在指定进程的端口号
+
+	netstat -an | grep ':端口号' 	找出运行在指定端口的进程
+
+	（10）显示网络接口列表
+
+	netstat -i
+
+	（11）IP和TCP分析
+
+	netstat -nat | grep "主机IP:端口号" |awk '{print $5}'|awk -F: '{print $1}'|sort|uniq -c|sort -nr|head -20 	 查看连接某服务端口最多的的IP地址
+
+	netstat -nat |awk '{print $6}' 		TCP各种状态列表
+
+	netstat -nat |awk '{print $6}'|sort|uniq -c 		先把状态全都取出来,然后使用uniq -c统计，之后再进行排序
+
+	netstat -nat |awk '{print $6}'|sort|uniq -c|sort -rn
+
+7.权限处理chmod
+	
+	eg：chmod -777 
+
+	chmod -R lamport:users *  
+
+	-rw------- (600) -- 只有属主有读写权限。  
+
+	-rw-r--r-- (644) -- 只有属主有读写权限；而属组用户和其他用户只有读权限。 
+
+	-rwx------ (700) -- 只有属主有读、写、执行权限。  
+
+	-rwxr-xr-x (755) -- 属主有读、写、执行权限；而属组用户和其他用户只有读、执行权限。  
+
+	-rwx--x--x (711) -- 属主有读、写、执行权限；而属组用户和其他用户只有执行权限。  
+
+	-rw-rw-rw- (666) -- 所有用户都有文件读、写权限。这种做法不可取。  
+
+	-rwxrwxrwx (777) -- 所有用户都有读、写、执行权限。更不可取的做法。 
+
+
+	chmod -777 * -R 		改变目录及其所有子目录的文件的权限
+
+	chmod -777 filename.*   改变文件为最大权限
+
+[张明远]:      https://zmy1123347389.github.io/
