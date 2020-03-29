@@ -9,13 +9,13 @@ tags:
   - netlify
 show_hero: true
 menu:
-  - title: Home
+  - title: 主页
     url: /
-  - title: About
+  - title: 关于
     url: /about
-  - title: Contact
+  - title: 联系
     url: /contact
-  - title: Feed
+  - title: 博客
     url: /feed.xml
-email: youremail@xyz.com
-disqus_username: disqus_username
+email: zmy112334@163.com
+disqus_username: 张明远
