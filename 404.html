@@ -1,6 +1,16 @@
 ---
-layout: 404
+layout: default
 title: 404
-description: The page you are looking for couldn't be found.
+hide-in-nav: true
+description: "你来到了没有知识的荒原 :("
+header-img: "img/404-bg.jpg"
 permalink: /404.html
 ---
+
+
+<!-- Page Header -->
+{% include intro-header.html type="page" short='true' %}
+
+<script>
+	document.body.classList.add('page-fullscreen');
+</script>
