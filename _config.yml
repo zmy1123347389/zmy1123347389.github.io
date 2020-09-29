@@ -1,8 +1,8 @@
 # Site settings
-title: Baymax Blog
-SEOTitle: 大白的博客 | Baymax Blog
+title: Axming Blog
+SEOTitle: 明远的博客 | Axming Blog
 header-img: img/home-bg.jpg
-email: xingbai56@gmail.com
+email: zmy112334@163.com
 description: ""
 keyword: ""
 url: "#"              # your host, for absolute URL
@@ -15,8 +15,8 @@ future: true
 RSS: false
 #weibo_username:     huxpro
 #zhihu_username:     huxpro
-github_username:    baymax55
-twitter_username:   xingbai56
+github_username:    zmy1123347389
+twitter_username:   zmy1123347389
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
 
