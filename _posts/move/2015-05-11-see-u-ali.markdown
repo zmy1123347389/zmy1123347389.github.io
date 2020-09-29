@@ -3,7 +3,7 @@ layout:     post
 title:      "See you, Alibaba "
 subtitle:   "再见，阿里。"
 date:       2015-05-11
-author:     "Hux"
+author:     "Axming"
 header-img: "img/post-bg-see-u-ali.jpg"
 tags:
   - 生活
@@ -98,7 +98,7 @@ Hi all
 * 知乎：@黄玄
 * 博客：<http://huangxuan.me>
 
- 
+
 **Hey，这里是编号 79717**
- 
+
 ![img](/img/in-post/post-c-u-ali-079717.png)

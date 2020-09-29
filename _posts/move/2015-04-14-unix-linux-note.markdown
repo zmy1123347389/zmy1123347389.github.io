@@ -3,7 +3,7 @@ layout:     post
 title:      "Unix/Linux 扫盲笔记"
 subtitle:   "不适合人类阅读，非常水的自我笔记"
 date:       2015-04-14 
-author:     "Hux"
+author:     "Axming"
 header-img: "img/post-bg-unix-linux.jpg"
 catalog: true
 tags:
@@ -147,7 +147,7 @@ Android is a mobile OS based on **Linux Kernel**, so it's definitely **Unix-like
 Android's source code is released by Google under open source licenses, although most Android devices ultimately ship with a combination of open source and proprietary software, including proprietary software developed and licensed by Google *(GMS are all proprietary)*  
 
 #### Android Kernel
-  
+
 Android's kernel is based on one of the Linux kernel's long-term support (LTS) branches.   
 
 **Android's variant of the Linux kernel** has further architectural changes that are implemented by Google outside the typical Linux kernel development cycle, and, certain features that Google contributed back to the Linux kernel. Google maintains a public code repo that contains their experimental work to re-base Android off the latest stable Linux versions.

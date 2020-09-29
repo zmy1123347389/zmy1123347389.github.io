@@ -3,7 +3,7 @@ layout:     post
 title:      "「知乎」对中国用户而言，Pure Android 是否比 MIUI 或 Flyme 体验更好？"
 subtitle:   ""
 date:       2014-09-04 12:00:00
-author:     "Hux"
+author:     "Axming"
 header-img: "img/post-bg-android.jpg"
 tags:
     - 知乎
@@ -20,7 +20,7 @@ tags:
     <br><b>毕竟是回答问题嘛，先给一个明确的答案</b>：
     <br>
     <br><b>否。（</b><b>对中国用户而言，Pure Android 并不比 MIUI 或 Flyme 体验更好。</b><b>）</b>
-    
+
     <p>从下面「 居然比关注数还多」的回答中，就可以看出大家都是急于站队的样子：</p>
     
     <ul>
@@ -33,7 +33,7 @@ tags:
     <br>（来，开始认真了。注意，我只分两类，数量非常小的Geek用户，和其余都算在内的非Geek用户）
     <br>
     <br>
-
+    
     <p>先说好理解的：</p>
     
     <ul>
@@ -51,9 +51,9 @@ tags:
     <br><b>哪里要担心这群人啊。</b>国内买不到的Nexus，用不了GMS，这都不叫事。
     <br>
     <br>
-
+    
     <p>那么，</p>
-
+    
     <ul>
         <li><b>为什么 非Geek 用户 不适合使用Pure Android？：</b>
         </li>

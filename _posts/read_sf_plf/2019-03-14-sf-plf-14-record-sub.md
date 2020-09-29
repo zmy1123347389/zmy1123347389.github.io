@@ -2,7 +2,7 @@
 title: "「SF-PLF」14 RecordSub"
 subtitle: "Programming Language Foundations - Subtyping with Records"
 layout: post
-author: "Hux"
+author: "Axming"
 header-style: text
 hidden: true
 tags:
@@ -40,3 +40,5 @@ for Record, can compiler reorder the fields? (SML and OCaml)
 
 
 
+
+```

@@ -5,7 +5,7 @@ subtitle:   "🎞  Slides:Service Worker 101, Working Offline and Instant Loadin
 iframe:     "//huangxuan.me/sw-101-gdgdf/"
 navcolor:   "invert"
 date:       2016-11-20
-author:     "Hux"
+author:     "Axming"
 tags:
     - Slides
     - Web

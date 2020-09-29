@@ -2,7 +2,7 @@
 layout: post
 title: "如何客观地评价「小程序」的体验?"
 subtitle: "Wechat Mini-Program vs. the Web, a UX comparison"
-author: "Hux"
+author: "Axming"
 header-img: ""
 header-bg-css: "linear-gradient(to right, #24b94a, #38ef7d);"
 tags:
@@ -52,7 +52,7 @@ tags:
 
 1.  由于小程序是打包部署并「安装」的，可以从文件系统中直接启动。以此解决 web 带来的网络延迟与离线时不可访问问题。
 
-  
+
 最后是 Integration。通过私有的 JS SDK，小程序可以借助微信这座桥梁实现很多以往 Web 并不容易实现的体验。同样，这些改进也非常 tricky，只解决痛点问题：
 
 1.  设备访问能力，文件、系统、网络、GPS、加速计、罗盘……
